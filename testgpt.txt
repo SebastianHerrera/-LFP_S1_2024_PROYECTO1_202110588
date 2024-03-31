@@ -1,0 +1,29 @@
+Inicio:{ 
+Encabezado:{ 
+TituloPagina:"Página de ejemplo"; 
+}, 
+Cuerpo:[ 
+Titulo:{ 
+texto:"Bienvenido a mi página"; 
+posicion:"centro"; 
+tamaño:"t3"; 
+color:"#3366ff"; 
+}, 
+Parrafo:{ 
+texto:"Esta es una página de ejemplo para probar el programa de traducción a HTML."; 
+posicion:"izquierda"; 
+}, 
+Subrayado:{ 
+texto:"Esto es un texto subrayado de ejemplo."; 
+}, 
+Negrita:{ 
+texto:"Esto es un texto en negrita de ejemplo."; 
+}, 
+Cursiva:{ 
+texto:"Esto es un texto en cursiva de ejemplo."; 
+}, 
+Salto:{ 
+cantidad:"2"; 
+}
+] 
+}

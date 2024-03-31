@@ -1,0 +1,44 @@
+Inicio:{
+Encabezado:{
+TituloPagina:"Ejemplo titulo";
+},
+Cuerpo:[
+Titulo:{
+texto:"Este es un titulo";
+posicion:"izquierda";
+tamaño:"t1";
+color:"rojo";
+},
+Fondo:{
+color:"cyan";
+},
+Parrafo:{
+texto:"Este es un parrafo de ejemplo.";
+posicion:"izquierda";
+},
+Texto:{
+fuente="Arial";
+color="azul";
+tamaño="11";
+},
+Codigo:{
+texto:"Muestra el texto con fuente de codigo de ordenador.";
+posicion:"centro";
+},
+Negrita:{
+texto:"Este texto aparecerá en negrita.";
+},
+Subrayado:{
+texto:"Este texto aparecerá Subrayado.";
+},
+Tachado:{
+texto:"Este texto aparecerá tachado.";
+},
+Cursiva:{
+texto:"Este texto aparecerá en cursiva.";
+},
+Salto:{
+cantidad:"5";
+}
+]
+}
