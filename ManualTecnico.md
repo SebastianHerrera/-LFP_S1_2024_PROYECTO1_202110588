@@ -8,9 +8,14 @@ El código proporcionado es un editor HTML desarrollado en Python utilizando la 
 
 El código se compone de los siguientes elementos clave:
 
-1. **Funciones de traducción**: Estas funciones son responsables de traducir el contenido del archivo de texto a HTML según ciertas reglas definidas en el código. La función `traducir_a_html` lleva a cabo la traducción del texto de entrada al formato HTML, mientras que la función `generar_html` se encarga de guardar el HTML generado en un archivo y abrirlo en un navegador web.
+1. **Funciones de traducción**: Estas funciones son responsables de traducir el contenido del archivo de texto a HTML según ciertas reglas definidas en el código. La función `traducir_a_html` lleva a cabo la traducción del texto de entrada al formato HTML, mientras que la función `generar_html` se encarga de guardar el HTML generado en un archivo y abrirlo en un navegador web. <br> ![Generar HTML](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/generar_a_html.png) <br> ![Generar HTML](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/generar_a_html.png)
+
+                                         
 
 2. **Interfaz gráfica de usuario**: Se crea una ventana principal utilizando `tkinter`, la cual incluye dos cuadros de texto: uno para el archivo de entrada y otro para el HTML generado. Además, se proporcionan botones para abrir archivos de texto, iniciar la traducción y etiquetas para cada cuadro de texto.
+
+![Tkinter](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/tkinter.png)
+
 
 ## Requisitos del sistema
 
