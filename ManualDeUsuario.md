@@ -14,8 +14,17 @@ El Editor HTML es una aplicación de escritorio que facilita la traducción de c
 ## Funcionalidades principales
 
 - **Abrir archivo**: Permite seleccionar un archivo de texto desde el sistema de archivos.
+
+![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/abrir%20archivo.png)
+![Texto alternativo]([URL_de_la_imagen](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/abrir%20archivo2.png))
+
 - **Traducir**: Inicia el proceso de traducción del contenido del archivo de texto a HTML.
+
+![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/traducir.png)
+
 - **Visualizar HTML generado**: El HTML traducido se mostrará en el cuadro de texto de la derecha, listo para su visualización y posible edición.
+
+![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/visualizacion.png)
 
 ## Recomendaciones de uso
 
