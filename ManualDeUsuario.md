@@ -1,44 +1,21 @@
-# Manual de Usuario
+## Manual de Usuario
 
-## Introducción
+### Descripción General
 
-El Editor HTML es una aplicación de escritorio que facilita la traducción de contenido de archivos de texto a HTML de manera rápida y sencilla. Con una interfaz intuitiva, los usuarios pueden abrir archivos de texto, generar el HTML correspondiente y visualizar el resultado en tiempo real. Este manual proporciona una guía detallada sobre cómo utilizar todas las funciones y características disponibles en la aplicación.
+El Sistema de Análisis de Código para MongoDB es una aplicación diseñada para facilitar el análisis léxico y sintáctico de código relacionado con operaciones en bases de datos MongoDB. Permite cargar un archivo de código, analizar su sintaxis y generar sentencias MongoDB correspondientes.
 
-## Inicio rápido
+### Instrucciones de Uso
 
-1. **Abrir la aplicación**: Ejecuta el archivo `editor_html.py` para iniciar la aplicación.
-2. **Abrir un archivo**: Haz clic en el botón "Abrir archivo" para seleccionar un archivo de texto (*.txt) que deseas traducir.
-3. **Traducir a HTML**: Una vez que hayas abierto un archivo, haz clic en el botón "Traducir" para generar el HTML correspondiente.
-4. **Ver HTML generado**: El HTML traducido se mostrará en el cuadro de texto de la derecha, listo para su visualización y posible edición.
+1. **Cargar Archivo**: Utiliza el botón "Cargar Archivo" para seleccionar un archivo de código fuente en el formato especificado. ![image](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/assets/98846377/e16720d7-70cb-4a71-ac82-73f36f705973)
 
-## Funcionalidades principales
+2. **Analizar Código**: Haz clic en "Analizar Código" para realizar el análisis léxico y sintáctico del código cargado. 
+3. **Mostrar Errores**: Si se encuentran errores durante el análisis, puedes verlos haciendo clic en "Mostrar Errores".
+4. **Generar Sentencias MongoDB**: Una vez que el análisis es exitoso, puedes generar las sentencias MongoDB correspondientes haciendo clic en "Generar Sentencias MongoDB".
+5. **Mostrar Sentencias MongoDB**: Después de generar las sentencias MongoDB, puedes verlas haciendo clic en "Mostrar Sentencias MongoDB".
+6. **Guardar Archivo**: Si lo deseas, puedes guardar el código cargado o las sentencias MongoDB generadas haciendo clic en "Guardar Archivo".
+7. **Salir**: Para cerrar la aplicación, haz clic en "Salir".
 
-- **Abrir archivo**: Permite seleccionar un archivo de texto desde el sistema de archivos.
+### Formato del Archivo de Código
 
-![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/abrir%20archivo.png)
-![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/abrir%20archivo2.png)
+El archivo de código debe seguir un formato específico para que el análisis se realice correctamente. Cada operación debe estar escrita siguiendo la estructura y palabras clave definidas en los lineamientos del proyecto.
 
-- **Traducir**: Inicia el proceso de traducción del contenido del archivo de texto a HTML.
-
-![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/traducir.png)
-
-- **Visualizar HTML generado**: El HTML traducido se mostrará en el cuadro de texto de la derecha, listo para su visualización y posible edición.
-
-![Texto alternativo](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/visualizacion.png)
-
-## Recomendaciones de uso
-
-- **Formato del archivo de entrada**: Asegúrate de que el archivo de texto de entrada siga el formato esperado para obtener los mejores resultados en la traducción.
-- **Revisión del HTML generado**: Después de la traducción, revisa el HTML generado para asegurarte de que se haya traducido correctamente y realiza los ajustes necesarios si es necesario.
-
-## Solución de problemas
-
-- **Errores de traducción**: Si encuentras algún error durante el proceso de traducción, asegúrate de que el archivo de texto siga el formato esperado y revisa los mensajes de error proporcionados por la aplicación.
-
-## Mejoras futuras
-
-- **Personalización de estilos**: Implementar opciones para personalizar los estilos del HTML generado, como colores, fuentes y tamaños.
-- **Edición avanzada de HTML**: Agregar funcionalidades avanzadas de edición de HTML, como resaltado de sintaxis, autocompletado y vista previa en tiempo real.
-- **Compatibilidad con más formatos de archivo**: Ampliar la compatibilidad para abrir y traducir archivos en formatos adicionales, como Markdown (*.md) o documentos de procesadores de texto.
-
-Con esta guía, los usuarios podrán aprovechar al máximo todas las funcionalidades del Editor HTML y realizar traducciones de manera eficiente y precisa. Si necesitas asistencia adicional o tienes alguna pregunta, no dudes en contactar al desarrollador.
