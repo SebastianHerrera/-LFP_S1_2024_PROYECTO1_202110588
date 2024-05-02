@@ -1,48 +1,74 @@
+
 # Manual Técnico
 
-## Descripción del código
+## Descripción General
 
-El código proporcionado es un editor HTML desarrollado en Python utilizando la biblioteca `tkinter`. Su funcionalidad principal es permitir a los usuarios abrir archivos de texto, traducir su contenido a HTML y visualizar el HTML generado en una interfaz gráfica de usuario. La traducción se realiza conforme a un formato predefinido en el archivo de texto de entrada.
+El presente manual técnico proporciona información detallada sobre el funcionamiento interno y la estructura del sistema. Incluye explicaciones sobre el análisis léxico y sintáctico, así como detalles sobre la implementación del software.
 
-## Componentes principales
+## Análisis Léxico
 
-El código se compone de los siguientes elementos clave:
+El análisis léxico es el proceso mediante el cual se identifican y categorizan los tokens individuales (como palabras clave, identificadores, números, etc.) en el código fuente. En nuestro sistema, utilizamos un enfoque basado en un autómata finito determinista (AFD) para llevar a cabo esta tarea.
 
-1. **Funciones de traducción**: Estas funciones son responsables de traducir el contenido del archivo de texto a HTML según ciertas reglas definidas en el código. La función `traducir_a_html` lleva a cabo la traducción del texto de entrada al formato HTML, mientras que la función `generar_html` se encarga de guardar el HTML generado en un archivo y abrirlo en un navegador web. <br> ![Generar HTML](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/generar_a_html.png) <br> ![Generar HTML](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/generar_a_html.png)
+### Autómata Finito Determinista (AFD)
 
-                                         
+El AFD utilizado en el análisis léxico de nuestro sistema se representa gráficamente de la siguiente manera:
 
-2. **Interfaz gráfica de usuario**: Se crea una ventana principal utilizando `tkinter`, la cual incluye dos cuadros de texto: uno para el archivo de entrada y otro para el HTML generado. Además, se proporcionan botones para abrir archivos de texto, iniciar la traducción y etiquetas para cada cuadro de texto.
+```
+            +-------------+
+            |    Inicio   |
+            +------+------+
+                   |
+                   v
+         +------------------+
+         |  Estado Inicial  |
+         +------------------+
+                   |
+                   | Letra
+                   v
+         +------------------+
+         |  Estado Palabra  |
+         +------------------+
+                   |
+                   | Espacio
+                   v
+           +--------------+
+           |  Estado Inicio |
+           +--------------+
+                   |
+                   | '/' o '='
+                   v
+         +------------------+
+         |  Estado Comentario  |
+         +------------------+
+                   |
+                   | Caracter no válido
+                   v
+          +--------------+
+          |  Estado Error |
+          +--------------+
+```
 
-![Tkinter](https://github.com/SebastianHerrera/-LFP_S1_2024_PROYECTO1_202110588/blob/main/Imgs/tkinter.png)
+### Tabla de Tokens
 
+A continuación se muestra la tabla de tokens junto con las expresiones regulares que definen cada uno:
 
-## Requisitos del sistema
+| Token               | Expresión Regular                 |
+|---------------------|-----------------------------------|
+| CREATE_DB           | `CrearBD`                         |
+| DELETE_DB           | `EliminarBD`                      |
+| CREATE_COLLECTION   | `CrearColeccion`                  |
+| DELETE_COLLECTION   | `EliminarColeccion`               |
+| INSERT_ONE          | `InsertarUnico`                   |
+| UPDATE_ONE          | `ActualizarUnico`                 |
+| DELETE_ONE          | `EliminarUnico`                   |
+| FIND_ALL            | `BuscarTodo`                      |
+| FIND_ONE            | `BuscarUnico`                     |
 
-- Python 3.x instalado en el sistema.
-- Biblioteca estándar de Python: tkinter.
-- Navegador web predeterminado del sistema (se utiliza para abrir el archivo HTML generado).
+## Análisis Sintáctico
 
-## Instalación y ejecución
+El análisis sintáctico se encarga de analizar la estructura del código fuente para determinar si cumple con las reglas gramaticales del lenguaje de programación. En nuestro sistema, implementamos un análisis sintáctico básico para validar la sintaxis de las sentencias MongoDB generadas.
 
-1. Asegúrate de tener Python 3.x instalado en tu sistema.
-2. Ejecuta el script Python proporcionado (`editor_html.py`).
-3. La aplicación abrirá una ventana donde podrás abrir archivos de texto, traducir su contenido a HTML y ver el HTML generado.
+## Conclusiones
 
-## Limitaciones conocidas
+El manual técnico proporciona una visión detallada del funcionamiento interno de nuestro sistema, incluyendo los procesos de análisis léxico y sintáctico. Además, se incluyen detalles sobre el autómata finito determinista utilizado en el análisis léxico y la gramática libre de contexto utilizada en el análisis sintáctico.
 
-- El formato del archivo de entrada debe seguir ciertas reglas específicas para que la traducción se realice correctamente. Si el formato no es válido, la aplicación mostrará un mensaje de error.
-- La aplicación solo funciona con archivos de texto (*.txt).
-- La generación de HTML puede no ser perfecta y puede requerir ajustes manuales dependiendo del contenido del archivo de entrada.
-
-## Arquitectura del código
-
-El código sigue una arquitectura modular, dividiendo la funcionalidad en funciones y componentes reutilizables para una fácil mantenibilidad y extensión en el futuro. Las funciones de traducción están separadas de la interfaz gráfica de usuario, lo que facilita la comprensión del flujo de datos y la depuración.
-
-## Mejoras futuras
-
-- Implementación de una validación más robusta del formato del archivo de entrada para detectar y manejar errores con mayor precisión.
-- Adición de opciones de personalización para los estilos de HTML generados, permitiendo a los usuarios ajustar el aspecto final del documento según sus necesidades.
-- Incorporación de funcionalidades avanzadas de edición de HTML, como resaltado de sintaxis, autocompletado y vista previa en tiempo real.
-
-Con esta información, los desarrolladores pueden comprender mejor la estructura y el funcionamiento del Editor HTML y realizar futuras mejoras y modificaciones de manera más eficiente.
