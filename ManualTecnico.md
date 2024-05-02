@@ -68,20 +68,25 @@ A continuación se muestra la tabla de tokens junto con las expresiones regulare
 
 El análisis sintáctico se encarga de analizar la estructura del código fuente para determinar si cumple con las reglas gramaticales del lenguaje de programación. En nuestro sistema, implementamos un análisis sintáctico básico para validar la sintaxis de las sentencias MongoDB generadas.
 
-S -> SENTENCIA
-SENTENCIA -> OPERACION | ERROR
-OPERACION -> FUNCION '=' DATOS
-FUNCION -> CREATE_DB | DELETE_DB | CREATE_COLLECTION | DELETE_COLLECTION | INSERT_ONE | UPDATE_ONE | DELETE_ONE | FIND_ALL | FIND_ONE
-DATOS -> STRING | STRING ',' DATOS | OBJECT | OBJECT ',' DATOS
-STRING -> "cadena"
-OBJECT -> '{' ATTRIBUTES '}'
-ATTRIBUTES -> ATTRIBUTE | ATTRIBUTE ',' ATTRIBUTES | ε
-ATTRIBUTE -> STRING ':' VALUE
-VALUE -> "cadena" | NUMBER | BOOLEAN | OBJECT | ARRAY
-NUMBER -> número
-BOOLEAN -> true | false
-ARRAY -> '[' ELEMENTS ']'
-ELEMENTS -> VALUE | VALUE ',' ELEMENTS | ε
+# Gramática Libre de Contexto
+
+La gramática define la estructura de las sentencias reconocidas por el analizador sintáctico.
+
+- S -> SENTENCIA
+- SENTENCIA -> OPERACION | ERROR
+- OPERACION -> FUNCION '=' DATOS
+- FUNCION -> CREATE_DB | DELETE_DB | CREATE_COLLECTION | DELETE_COLLECTION | INSERT_ONE | UPDATE_ONE | DELETE_ONE | FIND_ALL | FIND_ONE
+- DATOS -> STRING | STRING ',' DATOS | OBJECT | OBJECT ',' DATOS
+- STRING -> "cadena"
+- OBJECT -> '{' ATTRIBUTES '}'
+- ATTRIBUTES -> ATTRIBUTE | ATTRIBUTE ',' ATTRIBUTES | ε
+- ATTRIBUTE -> STRING ':' VALUE
+- VALUE -> "cadena" | NUMBER | BOOLEAN | OBJECT | ARRAY
+- NUMBER -> número
+- BOOLEAN -> true | false
+- ARRAY -> '[' ELEMENTS ']'
+- ELEMENTS -> VALUE | VALUE ',' ELEMENTS | ε
+
 
 
 ## Conclusiones
